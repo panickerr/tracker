@@ -1,0 +1,27 @@
+{
+        "MENU": {
+            "MENU": "Menu",
+             "SSI_DSCORE-MODULE": "SSI Dealer Score",
+             "SSI_DSNAPSHOT-MODULE": "SSI Dealer Snapsot",
+             "SSI_MODEL-MODULE": "SSI Model",
+             "SSI_OTHER-MODULE": "SSI Other",
+             "SSI_PRIORITY-MODULE": "SSI Priority",
+             "SSI_REGIONAL-MODULE": "SSI Regional",
+             "SSI_SOP-MODULE": "SSI SOP Analysis",
+             "SSI_SOPTREND-MODULE": "SSI SOP Trends",
+             "SSI_TREND-MODULE": "SSI Trends Analysis",
+             "SSI_SUMMARY-MODULE": "SSI Summary",
+             "CSI_DSCORE-MODULE": "CSI Dealer Score",
+             "CSI_DSNAPSHOT-MODULE": "CSI Dealer Snapsot",
+             "CSI_MODEL-MODULE": "CSI Model",
+             "CSI_OTHER-MODULE": "CSI Other",
+             "CSI_PRIORITY-MODULE": "CSI Priority",
+             "CSI_REGIONAL-MODULE": "CSI Regional",
+             "CSI_SOP-MODULE": "CSI SOP Analysis",
+             "CSI_SOPTREND-MODULE": "CSI SOP Trends",
+             "CSI_TREND-MODULE": "CSI Trends Analysis",
+             "CSI_SUMMARY-MODULE": "CSI Summary"
+             
+        }
+   
+}

@@ -1,0 +1,18 @@
+<md-toolbar style="background-color:#536DFE ;overflow-x: hidden " class="sidebar-left-toolbar" md-theme="{{::triSkin.elements.logo}}">
+    <div class="md-toolbar-tools" layout="row" layout-align="start center" style="padding-left: 4px;padding-right: 0px;">
+
+          <div style="padding-left: 0px;width:40px; height:30px;padding-right: 6px;" >
+            <img ng-src="{{::vm.sidebarInfo.appLogo}}" alt="{{::vm.sidebarInfo.appName}}" style="margin-top:3px; " >
+        </div>
+
+        <h2 flex class="sidebar-left-title" style="padding-left: 10px">AutoScope</h2>
+        <!--<h2 flex class="sidebar-left-title">{{::vm.sidebarInfo.appName}}</h2>-->
+        <!--<img src="assets/images/Hyundai_logo.png" alt="" style="height: 18px;width: 110px;padding-left: 2px;color:#000000;margin-bottom: 4px" />-->
+        
+        <md-button class="md-icon-button sidebar-left-icon" ng-click="vm.toggleIconMenu()" aria-label="Open side menu">
+            <md-icon style="color: #000000" md-font-icon ng-class="{ 'zmdi zmdi-chevron-right' : vm.layout.sideMenuSize == 'icon', 'zmdi zmdi-chevron-left' : vm.layout.sideMenuSize == 'full' }"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<tri-menu md-theme="{{triSkin.elements.sidebar}}" flex layout="column"></tri-menu>

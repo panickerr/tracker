@@ -1,0 +1,22 @@
+<div style="background-color: #536DFE;padding-right: 5px;" class="md-toolbar-tools">
+<!--    <md-button class="md-icon-button" ng-if="!vm.hideMenuButton()" ng-click="vm.openSideNav('left')" aria-label="side navigation">
+        <md-icon md-font-icon="zmdi zmdi-menu"></md-icon>
+    </md-button>-->
+
+
+<div flex="70" >
+     <span hide-xs style="font-size: 1.25em;color: #ffffff;line-height: 1vh" ng-repeat="crumb in vm.breadcrumbs.crumbs">
+            <span  translate>{{toolbarname}}</span>
+            <md-icon md-font-icon="zmdi zmdi-chevron-right" ng-if="!$last"></md-icon>
+        </span>
+        
+    <p hide-gt-xs ng-repeat="crumb in vm.breadcrumbs.crumbs" style="font-size: 2vmax;color: #ffffff;margin: 0px;padding-top: 1px">{{crumb.name}}</p>
+    <span hide-gt-xs style="font-size: 2vmin; font-weight: lighter" >{{subpagexs}} </span>
+    <!--</h4>-->
+</div>
+
+
+    <div flex="30" align="right" flex="row"  layout-margin>
+                        <!--<md-icon ng-click="refresh()"  md-font-icon="zmdi zmdi-sign-in zmdi-hc-lg" style=" color: #ffffff;font-size:2.5em" > </md-icon>-->
+    </div>
+</div>

@@ -1,0 +1,275 @@
+<style>
+    .flexbutton{
+        /*height: 10vmin;*/
+        color: #ffffff;
+        min-height: 9vh;
+        max-height: 9vh;
+        padding: .5vh;
+        margin-bottom: 1.5vh;
+        align-content: flex-end;
+    }
+    .flexbuttonsm{
+        /*height: 10vmin;*/
+        color: #ffffff;
+        min-height: 10vh;
+        max-height: 10vh;
+        padding: .5vh;
+        margin-bottom: 1.5vh;
+        align-content: flex-end;
+    }
+    .flexbutton1{
+        /*height: 10vmin;*/
+        color: #ffffff;
+        min-height: 10vh;
+        max-height: 12vh;
+        padding: .5vh;
+    }
+    .numbertxtxs{
+      text-align: right;
+      padding-top: 1.5vh;
+      margin: 0px;
+      font-size: 1.5vmax;
+      color: #000000;
+    }
+    .numberboxnum{
+        text-align: right;
+        padding-right: .5vw;
+        margin: 0px;
+        font-size: 3.5vmax;
+        color: #000000;
+    }
+
+    .textbox{
+          text-align: left;
+          font-size: 12px;
+          padding-left: 5px;
+          margin: 0px;
+          color: #000000;
+    }
+    .numberbox{
+        text-align: right;
+        margin: 0px;
+        font-size: 4.2vmax;
+        color: #000000;
+    }
+    .numberbox1{
+        text-align: right;
+        margin: 0px;
+        font-size: 3.5vh;
+        color: #000000;
+    }
+  
+    .textboxxs{
+        text-align: left;
+        font-size: 1.5vh;
+        padding-left: 1px;
+        margin: 0px;
+        color: #000000;
+    }
+    .textboxsm{
+        text-align: left;
+        font-size: 1.5vh;
+        padding-left: 1px;
+        margin: 0px;
+        color: #000000;
+    }
+    .icon{
+        width: 5vw;
+    }
+     .iconxs{
+        width: 9vw;
+    }
+     .iconsm{
+        width: 9vw;
+    }
+    .caricon{
+        width: 6vw;
+        padding-left: 2.5vw;
+    }
+    .cariconxs{
+        width: 14vw;
+        padding-left: 1vw;
+    }
+    .cariconsm{
+        width: 14vw;
+        padding-left: 1.5vw;
+    }
+</style> 
+
+<div class="dashboard-container overlay-2 " style=";padding: 2px" layout="column" align="center" ng-init="getData()">
+    <!--<div style='margin-bottom: 2px;background-color: #ffffff'>-->
+        <p style="margin: 0px;text-align: right ;font-size: 22px;color: #000000;padding-right: 4vw">{{headingss}}</p>
+        <!--</div>-->
+        <div hide-xs hide-sm class="maindiv" flex="100" layout="row" layout-xs="column" flex-xs="100" ng-init="graphs()"  style="margin-left: 1vw;margin-right: 1vw" layout-margin>
+                <div flex="10" class="drag-container" >   
+                                <tri-widget align="left" ng-click='outputer("vehicleinflow")' style="background-color: #B9CFAA;" layout="row" class="flexbutton" >
+                                    <p class="textbox"> Scanned </p>
+                                    <div align="right" layout="row" layout-align="end center"> <img class="icon" src="assets/images/GreenIcons/scan.png" alt=""/></div>
+                                </tri-widget>
+                                <tri-widget align="left" ng-click='outputer("ontime")' style="background-color: #B9CFAA" layout="row" class="flexbutton"  >
+                                    <p class="textbox"> In service</p>
+                                    <div align="right" layout="row" layout-align="end center"> <img class="icon" src="assets/images/GreenIcons/bay.png" alt=""/></div>
+                                </tri-widget>
+                                <tri-widget align="left" ng-click='outputer("ontime")' style="background-color: #B9CFAA" layout="row" class="flexbutton"  >
+                                    <p class="textbox">BodyShop</p>
+                                    <div align="right" layout="row" layout-align="end center"> <img class="icon" src="assets/images/GreenIcons/body.png" alt=""/></div>
+                                </tri-widget>
+                                <tri-widget align="left" ng-click='outputer("ontime")' style="background-color: #B9CFAA" layout="row" class="flexbutton"  >
+                                    <p class="textbox"> Quality</p>
+                                    <div align="right" layout="row" layout-align="end center"> <img class="icon" src="assets/images/GreenIcons/check.png" alt=""/></div>
+                                </tri-widget>
+                                <tri-widget align="left" ng-click='outputer("ontime")' style="background-color: #B9CFAA" layout="row" class="flexbutton"  >
+                                    <p class="textbox"> Test</p>
+                                    <div align="right" layout="row" layout-align="end center"> <img class="icon" src="assets/images/GreenIcons/test.png" alt=""/></div>
+                                </tri-widget>
+                                <tri-widget align="left" ng-click='outputer("ontime")' style="background-color: #B9CFAA" layout="row" class="flexbutton"  >
+                                    <p class="textbox"> Wash</p>
+                                    <div align="right" layout="row" layout-align="end center"> <img class="icon" src="assets/images/GreenIcons/wash.png" alt=""/></div>
+                                </tri-widget>
+                                <tri-widget align="left" ng-click='outputer("ontime")' style="background-color: #B9CFAA" layout="row" class="flexbutton"  >
+                                    <p class="textbox"> Ready</p>
+                                    <div align="right" layout="row" layout-align="end center"> <img class="icon" src="assets/images/GreenIcons/ready.png" alt=""/></div>
+                                </tri-widget>
+                    </div>
+                    <div flex="90">   
+                        <div ng-model="cols" align="left" ng-click='outputer("vehicleinflow")' style="background-color: #F2F2F2" layout="row" class="flexbutton" >
+                            <div ng-repeat="o in arscanned"><img class="caricon" src="assets/images/car.png" alt=""/></div>
+                        </div>
+                        <div align="left" ng-click='outputer("ontime")' style="background-color: #F2F2F2" layout="row" class="flexbutton"  >
+                            <div ng-repeat="o in arservice"><img class="caricon" src="assets/images/car.png" alt=""/></div>
+                        </div>
+                        <div align="left" ng-click='outputer("ontime")' style="background-color: #F2F2F2" layout="row" class="flexbutton"  >
+                            <div ng-repeat="o in arbody"><img class="caricon" src="assets/images/car.png" alt=""/></div>
+                        </div>
+                        <div align="left" ng-click='outputer("ontime")' style="background-color: #F2F2F2" layout="row" class="flexbutton"  >
+                          <div ng-repeat="o in arquality"><img class="caricon" src="assets/images/car.png" alt=""/></div>
+                        </div>
+                        <div align="left" ng-click='outputer("ontime")' style="background-color: #F2F2F2" layout="row" class="flexbutton"  >
+                           <div ng-repeat="o in artest"><img class="caricon" src="assets/images/car.png" alt=""/></div>
+                        </div>
+                        <div align="left" ng-click='outputer("ontime")' style="background-color: #F2F2F2" layout="row" class="flexbutton"  >
+                            <div ng-repeat="o in arwash"><img class="caricon" src="assets/images/car.png" alt=""/></div>
+                        </div>
+                        <div align="left" ng-click='outputer("ontime")' style="background-color: #F2F2F2" layout="row" class="flexbutton"  >
+                            <div ng-repeat="o in arready"><img class="caricon" src="assets/images/car.png" alt=""/></div>
+                        </div>
+                    </div>
+                        
+        </div>
+    
+        <div hide-gt-xs class="maindiv" layout="row" ng-init="graphs()" flex  layout-margin>
+                    <div flex="15" class="drag-container" layout="column" >   
+                                <tri-widget align="left" ng-click='outputer("vehicleinflow")' style="background-color: #B9CFAA;" layout="column" class="flexbutton" >
+                                    <p class="textboxxs"> Scanned </p>
+                                    <img class="iconxs" src="assets/images/GreenIcons/scan.png" alt=""/>
+                                </tri-widget>
+                                <tri-widget align="left" ng-click='outputer("ontime")' style="background-color: #B9CFAA" layout="column" class="flexbutton"  >
+                                    <p class="textboxxs"> In service</p>
+                                    <img class="iconxs" src="assets/images/GreenIcons/bay.png" alt=""/>
+                                </tri-widget>
+                                <tri-widget align="left" ng-click='outputer("ontime")' style="background-color: #B9CFAA" layout="column" class="flexbutton"  >
+                                    <p class="textboxxs"> Body Shop</p>
+                                    <img class="iconxs" src="assets/images/GreenIcons/body.png" alt=""/>
+                                </tri-widget>
+                                <tri-widget align="left" ng-click='outputer("ontime")' style="background-color: #B9CFAA" layout="column" class="flexbutton"  >
+                                    <p class="textboxxs"> Quality</p>
+                                    <img class="iconxs" src="assets/images/GreenIcons/check.png" alt=""/>
+                                </tri-widget>
+                                <tri-widget align="left" ng-click='outputer("ontime")' style="background-color: #B9CFAA" layout="column" class="flexbutton"  >
+                                    <p class="textboxxs"> Test</p>
+                                    <img class="iconxs" src="assets/images/GreenIcons/test.png" alt=""/>
+                                </tri-widget>
+                                <tri-widget align="left" ng-click='outputer("ontime")' style="background-color: #B9CFAA" layout="column" class="flexbutton"  >
+                                    <p class="textboxxs"> Wash</p>
+                                    <img class="iconxs" src="assets/images/GreenIcons/wash.png" alt=""/>
+                                </tri-widget>
+                                <tri-widget align="left" ng-click='outputer("ontime")' style="background-color: #B9CFAA" layout="column" class="flexbutton"  >
+                                    <p class="textboxxs"> Ready</p>
+                                    <img class="iconxs" src="assets/images/GreenIcons/ready.png" alt=""/>
+                                </tri-widget>
+                    </div>
+                     
+                    <div flex="85"  layout="column">   
+                        <div align="left" ng-click='outputer("vehicleinflow")' style="background-color: #F2F2F2" layout="row" class="flexbutton" >
+                            <div ng-repeat="o in arscanned"><img class="cariconxs" src="assets/images/car.png" alt=""/></div>
+                        </div>
+                        <div align="left" ng-click='outputer("ontime")' style="background-color: #F2F2F2" layout="row" class="flexbutton"  >
+                           <div ng-repeat="o in arservice"><img class="cariconxs" src="assets/images/car.png" alt=""/></div>
+                        </div>
+                        <div align="left" ng-click='outputer("ontime")' style="background-color: #F2F2F2" layout="row" class="flexbutton"  >
+                           <div ng-repeat="o in arbody"><img class="cariconxs" src="assets/images/car.png" alt=""/></div>
+                        </div>
+                        <div align="left" ng-click='outputer("ontime")' style="background-color: #F2F2F2" layout="row" class="flexbutton"  >
+                          <div ng-repeat="o in arquality"><img class="cariconxs" src="assets/images/car.png" alt=""/></div>
+                        </div>
+                        <div align="left" ng-click='outputer("ontime")' style="background-color: #F2F2F2" layout="row" class="flexbutton"  >
+                           <div ng-repeat="o in artest"><img class="cariconxs" src="assets/images/car.png" alt=""/></div>
+                        </div>
+                        <div align="left" ng-click='outputer("ontime")' style="background-color: #F2F2F2" layout="row" class="flexbutton"  >
+                           <div ng-repeat="o in arwash"><img class="cariconxs" src="assets/images/car.png" alt=""/></div>
+                        </div>
+                        <div align="left" ng-click='outputer("ontime")' style="background-color: #F2F2F2" layout="row" class="flexbutton"  >
+                            <div ng-repeat="o in arready"><img class="cariconxs" src="assets/images/car.png" alt=""/></div>
+                        </div>
+                    </div>
+                    
+        </div>
+    
+    <div hide-gt-sm hide-xs  class="maindiv" layout="row" ng-init="graphs()" flex  layout-margin>
+                    <div flex="15" class="drag-container"  layout="column" >   
+                                <tri-widget align="left" ng-click='outputer("vehicleinflow")' style="background-color: #B9CFAA;" layout="column" class="flexbuttonsm" >
+                                    <p class="textboxsm"> Scanned </p>
+                                    <img class="iconsm" src="assets/images/GreenIcons/scan.png" alt=""/>
+                                </tri-widget>
+                                <tri-widget align="left" ng-click='outputer("ontime")' style="background-color: #B9CFAA" layout="column" class="flexbuttonsm"  >
+                                    <p class="textboxsm"> In service</p>
+                                    <img class="iconsm" src="assets/images/GreenIcons/bay.png" alt=""/>
+                                </tri-widget>
+                                <tri-widget align="left" ng-click='outputer("ontime")' style="background-color: #B9CFAA" layout="column" class="flexbuttonsm"  >
+                                    <p class="textboxsm"> Body Shop</p>
+                                    <img class="iconsm" src="assets/images/GreenIcons/body.png" alt=""/>
+                                </tri-widget>
+                                <tri-widget align="left" ng-click='outputer("ontime")' style="background-color: #B9CFAA" layout="column" class="flexbuttonsm"  >
+                                    <p class="textboxsm"> Quality</p>
+                                    <img class="iconsm" src="assets/images/GreenIcons/check.png" alt=""/>
+                                </tri-widget>
+                                <tri-widget align="left" ng-click='outputer("ontime")' style="background-color: #B9CFAA" layout="column" class="flexbuttonsm"  >
+                                    <p class="textboxsm"> Test</p>
+                                    <img class="iconsm" src="assets/images/GreenIcons/test.png" alt=""/>
+                                </tri-widget>
+                                <tri-widget align="left" ng-click='outputer("ontime")' style="background-color: #B9CFAA" layout="column" class="flexbuttonsm"  >
+                                    <p class="textboxsm"> Wash</p>
+                                    <img class="iconsm" src="assets/images/GreenIcons/wash.png" alt=""/>
+                                </tri-widget>
+                                <tri-widget align="left" ng-click='outputer("ontime")' style="background-color: #B9CFAA" layout="column" class="flexbuttonsm"  >
+                                    <p class="textboxsm"> Ready</p>
+                                    <img class="iconsm" src="assets/images/GreenIcons/ready.png" alt=""/>
+                                </tri-widget>
+                    </div>
+                     
+                    <div flex="85"  layout="column">   
+                        <div align="left" ng-click='outputer("vehicleinflow")' style="background-color: #F2F2F2" layout="row" class="flexbuttonsm" >
+                           <div ng-repeat="o in arscanned"><img class="cariconsm" src="assets/images/car.png" alt=""/></div>
+                        </div>
+                        <div align="left" ng-click='outputer("ontime")' style="background-color: #F2F2F2" layout="row" class="flexbuttonsm"  >
+                           <div ng-repeat="o in arservice"><img class="cariconsm" src="assets/images/car.png" alt=""/></div>
+                        </div>
+                        <div align="left" ng-click='outputer("ontime")' style="background-color: #F2F2F2" layout="row" class="flexbuttonsm"  >
+                           <div ng-repeat="o in arbody"><img class="cariconsm" src="assets/images/car.png" alt=""/></div>
+                        </div>
+                        <div align="left" ng-click='outputer("ontime")' style="background-color: #F2F2F2" layout="row" class="flexbuttonsm"  >
+                           <div ng-repeat="o in arquality"><img class="cariconsm" src="assets/images/car.png" alt=""/></div>
+                        </div>
+                        <div align="left" ng-click='outputer("ontime")' style="background-color: #F2F2F2" layout="row" class="flexbuttonsm"  >
+                           <div ng-repeat="o in artest"><img class="cariconsm" src="assets/images/car.png" alt=""/></div>
+                        </div>
+                        <div align="left" ng-click='outputer("ontime")' style="background-color: #F2F2F2" layout="row" class="flexbuttonsm"  >
+                           <div ng-repeat="o in arwash"><img class="cariconsm" src="assets/images/car.png" alt=""/></div>
+                        </div>
+                        <div align="left" ng-click='outputer("ontime")' style="background-color: #F2F2F2" layout="row" class="flexbuttonsm"  >
+                            <div ng-repeat="o in arready"><img class="cariconsm" src="assets/images/car.png" alt=""/></div>
+                        </div>
+                    </div>
+                    
+        </div>
+</div>

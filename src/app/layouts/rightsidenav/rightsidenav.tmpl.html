@@ -1,0 +1,139 @@
+<!--<div>-->
+<md-content flex="85" layout class="admin-notifications padding-left-10">
+    
+    <md-tabs flex md-no-pagination="enable">
+       <md-tab>
+            <md-tab-label style="background-color: #e2e2e2">
+                    <p>Filters</p> 
+            </md-tab-label>
+            
+           
+           <md-tab-body style="overflow-y: hidden" >
+                <md-content style="overflow-y: hidden" layout="column">
+                        <h4 ng-hide="modelhidePAGE4" flex="70" class="legends">Model</h4>
+<!--                        <div ng-hide="modelhide"  style="height:20vmin;overflow-y: auto; font-size: 2vmin;padding-left:7px;  ">
+                            <ul><li ng-repeat="city in Filterarray.model">
+                                <md-checkbox type="checkbox" class="red" ng-model="$root.model"  ng-change="modelChecked(city)">{{city}}</md-checkbox></li></ul>
+                        </div>-->
+                        <div ng-hide="modelhidePAGE4"  style="height:18vh;overflow-y: auto; font-size: 2vmin;padding-left:7px;" ng-model="modeltype" ng-change="modelChecked()">
+                                <md-checkbox type="checkbox" ng-model="allSelected" ng-change="toggleAll()" >
+                                    <label ng-show="allSelected" >All Selected</label>
+                                    <label ng-hide="allSelected" >Select All</label>
+                                </md-checkbox>
+                           <ul><li ng-repeat="city in Filterarray.model">  
+                               <md-checkbox style="font-size: 2vmin" type="checkbox" class="red" ng-model="city.checked"  ng-change="cbChecked()">{{city.label}}</md-checkbox></li></ul>
+                        </div>
+                        
+                    <!--monthly trends graph only-->
+                        <h4  ng-show="monthlyModel"  flex="70" class="legends">Model</h4>
+                        <div ng-show="monthlyModel" style="height:18vh;overflow-y: auto; font-size: 2vmin;padding-left:7px;" ng-model="monthlymodeltype" >
+                           <ul><li ng-repeat="city in Filterarray.model">  
+                               <md-checkbox style="font-size: 2vmin" type="checkbox" class="red" ng-model="city.checked"  ng-change="cbChecked()">{{city.label}}</md-checkbox></li></ul>
+                        </div>
+                    <!--monthly trends graph only-->
+
+                     <md-divider></md-divider>
+                     <br>
+                        <h4 flex="70" class="legends">Fuel Type</h4>
+                        
+                        <div  style="height:12vmin; overflow-y: auto;font-size: 2vmin;padding-left:7px;" ng-model="fueltype" ng-change="fuelChecked()">
+                                <md-checkbox type="checkbox" ng-model="fuelallSelected" ng-change="fueltoggleAll()" >
+                                    <label ng-show="fuelallSelected" >All Selected</label>
+                                    <label ng-hide="fuelallSelected" >Select All</label>
+                                </md-checkbox>
+                           <ul><li ng-repeat="city in Filterarray.fuel">  
+                               <md-checkbox style="font-size: 2vmin" type="checkbox" class="red" ng-model="city.checked"  ng-change="fuelcbChecked()">{{city.label}}</md-checkbox></li></ul>
+                        </div>
+                        
+                        <md-divider></md-divider>
+                        <br>
+                        <md-input-container ng-hide="cityhide"><label class="labels">City</label><md-select ng-model="city" placeholder="City" ng-change="citychanged(city)" >
+                                     <md-option>All</md-option><md-option ng-repeat="year in Filterarray.city" >{{year}}</md-option>
+                                </md-select></md-input-container>
+                     
+                   
+                     
+                        <md-input-container ng-hide="timehide" ><label class="labels">Time Period</label><md-select ng-model="timeperiod" placeholder="Time Period" ng-change="yearchanged(timeperiod)" >
+                                     <md-option>All</md-option><md-option ng-repeat="year in Filterarray.timeperiod" >{{year}}</md-option>
+                                </md-select></md-input-container>
+                        
+                        
+<!--                        <div layout="row" layout-align="center center">
+                            <div flex="10"></div>
+                            <md-button ng-click="filterReset()" class="md-primary"> Filter Reset</md-button>
+                        </div>-->
+                        
+                        <div ng-show="modelhide"  style="height:12vh;overflow-y: auto; font-size: 2vmin;padding-left:7px;" ng-model="modeltype" ng-change="modelChecked()">
+                                </div>
+                         <div ng-show="modelhide2_1"  style="height:12vh;overflow-y: auto; font-size: 2vmin;padding-left:7px;" ng-model="modeltype" ng-change="modelChecked()">
+                                </div>
+                        <div flex="10" ng-show="modelhide"  >
+                               <img src="{{imagepath}}"></img>
+                               <!--<p>{{imagepath}}</p>-->
+                        </div>
+                        
+                        
+                        
+                        
+<!--                        <div ng-show="righttexthide"  palette-background="triCyan:400" style="height: 15vmin;margin-right: 1vmin" layout="column">
+                            <div flex="20" layout="column" content-padding layout-align="right end">
+                                 <p class=" md-display-1 font-weight-400 margin-top-0 margin-bottom-0" style="font-size: 2.5vmin; word-break: break-all;text-align: right">{{sidename}}</p>
+
+                            </div>
+                            <div layout="row" layout-align="start end" flex="80"  content-padding style="padding-right: 5px;margin-bottom: .5vmin;margin-top: .5vmin">
+                                <p class="md-display-1 font-weight-500 margin-top-0 margin-bottom-0 " style="font-size: 7vmin;">{{rightsidevalue}}</p>
+                                 <span class=" md-display-1 font-weight-400 margin-top-0 margin-bottom-0" style="font-size:1.5vmin">PP100</span>
+                            </div>
+                        </div>-->
+                        
+                    <div ng-show="righttexthide"  palette-background="triCyan:400" style="height: 15vh;margin-right: 1vmin;padding: 5px" layout="column"  content-padding >
+                            
+                            <div content-padding flex="20" style="margin-bottom: .5vmin;margin-top: .5vmin;" align="right">
+                                <div flex="20"></div>
+                                 <span class=" font-weight-500 margin-top-0 margin- md-display-1bottom-0" style="font-size: 1.4rem; word-break: break-all;text-align: right;line-height: 30px">{{sidename}}</span>
+                             </div>
+                            <!--<p>Test words</p>-->
+                            <div flex="70" layout="row" content-padding >
+                                   <span flex="75" layout-align="start start" class="font-weight-600" style="font-size: 5rem;letter-spacing: -3px;">{{rightsidevalue}}</span>
+                                   <span flex="25" align="right" class=" font-weight-400 margin-top-0 margin-bottom-0" style="font-size:1rem">PP100</span>
+                            </div>
+                    </div>
+
+<!--                      <div ng-show="righttexthide"  palette-background="triCyan:400" style="height: 15vmin;margin-right: 1vmin;padding: 5px" layout="column"  content-padding >
+                            <div layout-align="space-between center" layout="row" flex="30" style="margin-bottom: .5vmin;margin-top: .5vmin">
+                                <p class=" md-display-1 font-weight-500 margin-top-0 margin-bottom-0" style="font-size: 1.5rem; word-break: break-all;text-align: right;line-height: 30px">{{sidename}}</p>
+                            </div>
+                            <div flex="70" layout="row" content-padding layout-align="right end">
+                                <p class="md-display-1 font-weight-600 margin-top-0 margin-bottom-0 " style="font-size: 4rem;">{{rightsidevalue}}</p>
+                                <span class=" md-display-1 font-weight-400 margin-top-0 margin-bottom-0" style="font-size:1rem">PP100</span>
+                            </div>
+                        </div>-->
+                        
+                        
+<!--                             <div ng-hide="rightsideimage">
+                           <div ng-bind-html-unsafe="iamgepath"></div>
+                           <p>{{sidemodel}}</p>
+                        </div>-->
+       
+                </md-content>
+            </md-tab-body>
+        </md-tab>
+        
+    </md-tabs>
+    
+</md-content>
+
+<div flex="15">
+<!--       <div hide-xs ng-show="righttexthide"  palette-background="triCyan:400" style="height: 15vh;margin-right: 1vmin;padding: 5px" layout="column"  content-padding >
+                            
+                            <div content-padding flex="20" style="margin-bottom: .5vmin;margin-top: .5vmin;" align="right">
+                                <div flex="20"></div>
+                                 <span class=" font-weight-500 margin-top-0 margin- md-display-1bottom-0" style="font-size: 1.4rem; word-break: break-all;text-align: right;line-height: 30px">{{sidename}}</span>
+                             </div>
+                            <p>Test words</p>
+                            <div flex="70" layout="row" content-padding >
+                                   <span flex="75" layout-align="start start" class="font-weight-600" style="font-size: 5rem;letter-spacing: -3px;">{{rightsidevalue}}</span>
+                                   <span flex="25" align="right" class=" font-weight-400 margin-top-0 margin-bottom-0" style="font-size:1rem">PP100</span>
+                            </div>
+                    </div>-->
+</div>

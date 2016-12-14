@@ -1,0 +1,10 @@
+{
+    "MENU": {
+        "CSI_SUMMARY": {
+            "CSI_SUMMARY": "CSI Summay"
+        }
+    },
+    "CSI_SUMMARY": {
+        "TITLE": "The summmary page"
+    }
+}

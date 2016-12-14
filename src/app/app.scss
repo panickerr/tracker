@@ -1,0 +1,173 @@
+$sidenav-mobile-width: 260px;
+$sidenav-desktop-width: 300px;
+
+// import angular material scss
+@import "angular-material/angular-material.scss";
+
+body {
+  color: #212121;
+  overflow-x:hidden; 
+}
+
+
+
+// set template font family
+button, select, html, textarea, input {
+  /*font-family: RobotoDraft, Roboto, 'Helvetica Neue', sans-serif;*/
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+// import app scss
+@import "scss/material-backgrounds";
+
+// Add your CSS here
+.navibutton{
+    height: 80px;
+}
+
+
+.bottombutton{
+   line-height: 1rem !important;
+   width: 3.4rem !important;
+   height: 2.4rem !important;
+   padding-left: 3px !important;
+   padding-bottom: 2px !important;
+   padding-top: 2px !important;
+   padding-right: 2px !important;
+    margin: 0px !important;
+}
+
+ .h4style{
+        font-size: 2vmin;
+        line-height: 100%;
+        
+    }
+
+    
+    .highchartparent{
+        height: 74vh;
+        max-width: 100%;
+        overflow-y: auto;
+        overflow-x: hidden
+    }
+    
+    .highchartparentdropdown{
+        height: 70vh;
+        max-width: 100%;
+        overflow-y: hidden;
+        overflow-x: hidden
+    }
+    
+    
+    .highchartdiv{
+        height: 72vh;
+        width: 100%
+    }
+    
+    .highchartdivcolumn{
+        height: 100vh;
+        width: 100%;
+        /*overflow-y: scroll;*/
+    }
+    
+    .highchartdivdropdown{
+        height: 69vh;
+        width: 100%
+    }
+    
+    
+    
+.fillerheading{
+    text-align: left;
+    font-weight: 100px;
+    margin-left: 15px;
+}
+
+
+
+div md-list-item{
+    height: 60px;
+   
+}
+
+div md-list-item p{
+    line-height:130%; border-bottom-color: #000000;
+    font-size: 14px;
+}
+
+
+
+div md-list-item:selected{
+    background-color: #006dcc;
+}
+
+////////////////////////////////////////////
+
+
+///////////////////////////////////////
+md-list-item p{
+    color: #006dcc;
+}
+
+.filter md-card{
+    background-color: #ECECEC;
+    
+}
+
+.filter md-card ul{
+    margin-left: 30px;
+    font-size: 16px;
+    
+}
+
+.headings{
+    text-align:left;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
+
+.legends{
+    text-align: left;
+    font-size: 14px;
+    margin: 5px;
+    padding-bottom: 5px;
+}
+
+.labels{
+     text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.instructions{
+    text-align: center;
+    font-size: 14px;
+}
+
+        
+.side-menu-link {
+      font-size: 9px;
+      font-weight: 100;
+        padding-right: 1px;
+      
+    }
+
+    
+    
+.side-menu-icon[md-font-icon] {
+    font-size: 32px;
+}
+///////////////////////////tabs
+
+
+
+
+
+/**
+ *  Do not remove this comments bellow. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+
+// injector
+// endinjector

@@ -1,0 +1,298 @@
+<!--<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+<link href="../../../../bower_components/MDBootstrap/css/mdb.min.css" rel="stylesheet" type="text/css"/>
+<style>
+    @font-face {
+font-family: 'Roboto', sans-serif;}
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover; 
+	filter: gray; /* IE6-9 */
+	 filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+	 -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+	}
+        
+        
+        .md-form{
+    position: relative;
+
+}
+.login-frame img{
+    max-height:200px;
+}
+.md-form .prefix~input, .md-form .prefix~textarea
+{
+    margin-left: 3rem;
+        width: calc(100% - 3rem);
+
+}
+.md-form .prefix{
+    position: absolute;
+    width: 3rem;
+    font-size: 3rem;
+    color: #cdcdcd;
+    transition: color .2s;
+    
+}
+.form-control{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+        
+md-content.md-cyan-theme{
+    color:#FFFFFF;
+}    
+</style>
+
+<md-toolbar  id="logintoolbar" layout="row" layout-align="start end" style="background-color:{{themecolor}}" >
+		<div class="md-toolbar-tools"   style="min-height:20px;">
+     		<p  flex class="navbar-brand" > Auto Service Connect</p>
+         	<a align="right" flex class="navbar-brand" href="http://wheelmonk.com/home/"><img id="logo" src="assets/images/wheelmonklogo.png" height="40"></a>
+        	
+    	</div>
+</md-toolbar>
+<md-toolbar  id="logintoolbar" layout="row" layout-align="start end" style="background-color:{{themecolor}}" >
+        <div class="md-toolbar-tools"   style="min-height:20px;box-shadow: 5px 5px 5px #000000">
+            <p flex style="font-family: Roboto;font-size:2vmax;font-weight: lighter;text-align: left" id="toolbartext">ABC Auto Service Connect</p>
+         		
+            <a layout="row"       layout-align="end center" flex class="navbar-brand" href="http://wheelmonk.com/home/">
+                    <img hide-gt-xs id="logo" style=" color: #f2f2f2;" src="assets/images/wheelmonklogo.png">
+                    <img layout="row"       layout-align="start center" hide-xs id="logo" style=" color: #f2f2f2;margin-top: 10px" src="assets/images/wheelmonklogo.png" height="50">
+                </a>
+         	
+    	</div>
+</md-toolbar>
+
+
+    <video autoplay="" loop="" poster="assets/images/background .JPG" id="bgvid">
+</video>
+
+
+
+
+
+<link rel="shortcut icon" type="image/x-icon" href="http://leadicsapps.com/Favicon3.ico"> 
+<style>
+
+ /* Font Definitions */
+
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Roboto",sans-serif;}
+.MsoChpDefault
+	{font-family:"Roboto",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:1.0cm 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+
+
+
+
+#logintoolbar{
+   min-height:55px !important;
+}
+#logintoolbar2{
+   min-height:40px !important;
+}
+
+#toolbartext{
+    text-align:right;
+    font-size:30px;
+}
+.card{
+    border:0;
+}
+.card-block{
+padding:1.25rem;
+}
+.md-form{
+    position: relative;
+
+}
+
+.md-form .prefix~input, .md-form .prefix~textarea
+{
+    margin-left: 3rem;
+        width: calc(100% - 3rem);
+
+}
+.md-form .prefix{
+    position: absolute;
+    width: 4rem;
+    font-size: 2rem !important;
+    transition: color .2s;
+    padding-right: 2px;
+    
+}
+.form-control{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+#boxshadow:hover{
+ box-shadow: 0 15px 24px rgba(0, 0, 0, 0.22), 0 19px 76px rgba(0, 0, 0, 0.3);   
+}
+
+
+</style>
+
+
+
+
+
+<div class="WordSection1">
+
+
+
+<div layout="row" layout-xs='column' layout-align="center center" style="height:80vh;">
+    <div  hide-xs flex align="center">
+        <img  src="assets/images/Picture3.png" style="height:200px !importtant;">
+    </div>
+    <div hide-xs flex layout="column"  align="center" >
+                <md-content layout="column" class="md-padding" style="border-top-left-radius: 5px;
+            border-top-right-radius: 5px;overflow-y: hidden;height:35vh;width:23vw;padding-top:7vh;background-color:{{themecolor}};box-shadow: 5px 5px 5px #000000">
+                        <form name="login" layout="column"  >
+                            <md-input-container >
+                                <div  layout="row">
+                                    <i style="color: #cdcdcd !important;font-size: 7vh" flex="20" class="fa fa-user  prefix">
+                                         <md-tooltip md-direction="left">Username</md-tooltip>
+                                    </i>
+                                <input layout="row"       layout-align="center end"  style="border-bottom-color: #C0C3CA;margin-top: 10px" flex="70" id="email" label="email" name="email" type="text" ng-model="vm.user.email" required/>
+                                </div>
+                            </md-input-container >
+                            <md-input-container >
+                                <div  layout="row">
+                                    <i style="color: #cdcdcd !important;font-size: 7vh" flex="20" class="fa fa-lock  prefix">
+                                        <md-tooltip md-direction="left">Password</md-tooltip>
+                                    </i>
+                                <input layout="column"       layout-align="end center" style="border-bottom-color: #C0C3CA;margin-top: 10px" flex="70" id="password" label="password" name="password" type="password" ng-model="vm.user.password" required/>
+                                </div>
+                            </md-input-container>
+
+                        </form>
+
+                    </md-content>
+                    <md-button style="border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;color: {{themecolor}};width: 23vw;height:10vh;background-color: whitesmoke;font-size: 3vmax;text-transform: capitalize;box-shadow: 5px 5px 5px #000000" class="md-raised full-width margin-left-0 margin-right-0 margin-top-0 margin-bottom-1"  ng-click="vm.loginClick()" ng-disabled="login.$invalid" translate="Login" aria-label="{{'LOGIN.BUTTON' | translate}}">Login</md-button>
+
+        </div>
+    
+        <div hide-gt-xs  layout="column"  align="center">
+                <md-content layout="column" class="md-padding" style="border-top-left-radius: 5px;
+            border-top-right-radius: 5px;overflow-y: hidden;height:35vh;width:70vw;padding-top:7vh;background-color:{{themecolor}};box-shadow: 5px 5px 5px #000000">
+                        <form name="login" layout="column"  >
+                            <md-input-container >
+                                <div  layout="row">
+                                    <i style="color: #cdcdcd !important;font-size: 7vh" flex="20" class="fa fa-user  prefix">
+                                         <md-tooltip md-direction="left">Username</md-tooltip>
+                                    </i>
+                                <input layout="row"       layout-align="center end"  style="border-bottom-color: #C0C3CA;margin-top: 10px" flex="70" id="email" label="email" name="email" type="text" ng-model="vm.user.email" required/>
+                                </div>
+                            </md-input-container >
+                            <md-input-container >
+                                <div  layout="row">
+                                    <i style="color: #cdcdcd !important;font-size: 7vh" flex="20" class="fa fa-lock  prefix">
+                                        <md-tooltip md-direction="left">Password</md-tooltip>
+                                    </i>
+                                <input layout="column"       layout-align="end center" style="border-bottom-color: #C0C3CA;margin-top: 10px" flex="70" id="password" label="password" name="password" type="password" ng-model="vm.user.password" required/>
+                                </div>
+                            </md-input-container>
+
+                        </form>
+
+                    </md-content>
+                    <md-button style="border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;color: {{themecolor}};width: 70vw;height:10vh;background-color: whitesmoke;font-size: 3vmax;text-transform: capitalize;box-shadow: 5px 5px 5px #000000" class="md-raised full-width margin-left-0 margin-right-0 margin-top-0 margin-bottom-1"  ng-click="vm.loginClick()" ng-disabled="login.$invalid" translate="Login" aria-label="{{'LOGIN.BUTTON' | translate}}">Login</md-button>
+
+
+        </div>
+            <div hide-xs flex layout="column"  align="center">
+                    <md-content layout="column" class="md-padding" style="overflow-y: hidden;height:35vh;width:26vw;padding-top:7vh;background-color:{{themecolor}}">
+                            <form name="login" layout="column"  >
+                                <md-input-container >
+                                    <div  layout="row">
+                                    <i style="color: #cdcdcd !important;font-size: 36px" flex="20" class="fa fa-user  prefix"></i>
+                                    <input flex="70" id="email" label="email" name="email" type="text" ng-model="vm.user.email" required/>
+                                    </div>
+                                </md-input-container >
+                                <md-input-container >
+                                    <div  layout="row">
+                                    <i style="color: #cdcdcd !important;font-size: 36px" flex="20" class="fa fa-lock  prefix"></i>
+                                    <input  flex="70" id="password" label="password" name="password" type="password" ng-model="vm.user.password" required/>
+                                    </div>
+                                </md-input-container>
+                            </form>
+                        </md-content>
+                        <md-button style="color: {{themecolor}};width: 26vw;height:10vh;background-color: whitesmoke;font-size: 3vmax;text-transform: capitalize;" class="md-raised full-width margin-left-0 margin-right-0 margin-top-0 margin-bottom-1"  ng-click="vm.loginClick()" ng-disabled="login.$invalid" translate="Login" aria-label="{{'LOGIN.BUTTON' | translate}}">Login</md-button>
+            </div>
+            <div hide-gt-xs  layout="column"  align="center">
+                    <md-content layout="column" class="md-padding" style="overflow-y: hidden;height:35vh;width:80vw;padding-top:7vh;background-color:{{themecolor}}">
+                            <form name="login" layout="column"  >
+                                <md-input-container >
+                                    <div  layout="row">
+                                    <i style="color: #cdcdcd !important;font-size: 36px" flex="20" class="fa fa-user  prefix"></i>
+                                    <input flex="70" id="email" label="email" name="email" type="text" ng-model="vm.user.email" required/>
+                                    </div>
+                                </md-input-container >
+                                <md-input-container >
+                                    <div  layout="row">
+                                    <i style="color: #cdcdcd !important;font-size: 36px" flex="20" class="fa fa-lock  prefix"></i>
+                                    <input  flex="70" id="password" label="password" name="password" type="password" ng-model="vm.user.password" required/>
+                                    </div>
+                                </md-input-container>
+                            </form>
+                        </md-content>
+                        <md-button style="color: {{themecolor}};width: 80vw;height:10vh;background-color: whitesmoke;font-size: 6vmax;text-transform: capitalize;" class="md-raised full-width margin-left-0 margin-right-0 margin-top-0 margin-bottom-1"  ng-click="vm.loginClick()" ng-disabled="login.$invalid" translate="Login" aria-label="{{'LOGIN.BUTTON' | translate}}">Login</md-button>
+            </div>
+</div>
+/Frm with header
+
+</div>
+
+<div  flex="noshrink" layout="column" layout-align="end none" >
+    <md-toolbar   id="logintoolbar2" md-theme="cyan-white">
+        <div  class="md-toolbar-tools md-body-1" layout="row" layout-align="space-between center">
+             <a href="http://www.leadics.com" target="_blank"> 
+                 <a href="http://www.leadics.com" target="_blank"> 
+                 <img style="background-color: #ffffff; height: 35px;"  src="assets/images/leadics4.png" alt=""/>
+             </a>
+                 <img style="background-color: #ffffff; height: 35px;"   src="assets/images/autoscopelogo.JPG" alt=""/>
+             </a>
+
+        </div>
+    </md-toolbar>
+</div>
+
+</div>
+
+
+
+-->
+
+
+<div class="app-loader" flex layout="column" ng-cloak layout-align="center center" ng-init="login()">
+<img ng-cloak src="assets/images/autoscopelogo.JPG" alt="" style="margin-bottom: 10px">
+<md-progress-linear class="padding-bottom-10" md-mode="indeterminate"></md-progress-linear>
+<!--<h2 ng-cloak class="padding-bottom-100">Suzuki</h2>-->
+</div>

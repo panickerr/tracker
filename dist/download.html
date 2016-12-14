@@ -1,0 +1,7 @@
+<md-dialog aria-label="Information"><form><md-toolbar><div style="background-color: #00B050" class="md-toolbar-tools"><h2>Choose Download Month</h2><md-button ng-click="cancel();"><md-icon md-font-icon="zmdi zmdi-close"></md-icon></md-button></div></md-toolbar><md-dialog-content ng-repeat="obj in downloaddata" align="center"><md-button style="padding: 5px" href="{{obj.url}}">{{obj.Name}}</md-button></md-dialog-content></form></md-dialog><script>
+    
+    
+function downloadfunction() {
+   console.log("Download complete");    
+}
+</script>
